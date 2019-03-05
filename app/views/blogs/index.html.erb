@@ -1,0 +1,58 @@
+<style>
+  h1{
+    color:#555555;
+    font-size:20px;
+  }
+
+  table,th,td {
+    border:solid 1pt #aaaaaa;
+    border-collapse:collapse;
+  }
+  
+  th{
+    background-color:#b0c4de;
+    color:#6666aa;
+    padding:5px;
+  }
+  td {
+    padding:3px;
+    color:#555555;
+  }
+  
+  td:nth-child(3),td:nth-child(4),td:nth-child(5){
+    text-align:center;
+  }
+  
+  a {
+    text-decoration:none;
+  }
+  a:hover{
+    pointer:cursur;
+    background-color:#e0ffff;
+    width:100%;
+  }
+
+</style>
+<%= notice %>
+<h1>Blog List Display</h1>
+  <table>
+    <tr>
+      <th>title</th>
+      <th>content</th>
+      <th>more detail</th>
+      <th>edit</th>
+      <th>delete</th>
+    </tr>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.title %></td>
+        <td><%= blog.content %></td>
+        <td><%= link_to '■', blog_path(blog.id) %></td>
+        <td><%= link_to '■', edit_blog_path(blog.id) %></td>
+        <td><%= link_to '■', blog_path(blog.id), method: :delete,
+                data:{ confirm: 'are you sure to delete this blog?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+  <br>
+  <%= link_to '=> new entry',new_blog_path  %>
