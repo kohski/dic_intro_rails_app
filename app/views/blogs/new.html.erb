@@ -1,20 +1,4 @@
-<style>
-  h2{
-    font-size:15px;
-  }
-  #error_header{
-    border: solid 2px red;
-    background-color:#ff0000;
-    color:#ffffff;
-  }
-  
-  #error_contents{
-    border:solid 2px red;
-    background-color:#ffe7e0;
-  }
-</style>
 <%= notice %>
-
-<h2>New Blog Entry</h2>
+<h2 id="new_title">New Blog Entry</h2>
 <%= render 'form' %>
 <%= link_to  'back to top', blogs_path %>

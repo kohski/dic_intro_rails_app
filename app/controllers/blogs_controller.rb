@@ -1,7 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only:[:show,:edit,:update,:destroy]
 
-
   def index
     @blogs = Blog.all
   end
@@ -30,8 +29,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
     render 'new' if @blog.invalid?
   end
-  
-  
+
   def edit
   end
   

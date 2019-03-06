@@ -1,3 +1,63 @@
 // Place all the styles related to the blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//styl of index.html.erb 
+  #index_title{
+    color:#555555;
+    font-size:20px;
+  }
+
+  #list_disp {
+    border:solid 1pt #aaaaaa;
+    border-collapse:collapse;
+  }
+  
+  #list_disp th{
+    background-color:#b0c4de;
+    color:#6666aa;
+    padding:5px;
+    border:solid 1pt #aaaaaa;
+    border-collapse:collapse;
+  }
+  #list_disp td {
+    padding:3px;
+    color:#555555;
+    border:solid 1pt #aaaaaa;
+    border-collapse:collapse;
+  }
+  
+  #list_disp td:nth-child(3),td:nth-child(4),td:nth-child(5){
+    text-align:center;
+  }
+  
+  #list_disp a {
+    text-decoration:none;
+  }
+  #list_disp a:hover{
+    pointer:cursur;
+    background-color:#e0ffff;
+    width:100%;
+  }
+  
+
+// style of new.html.erb
+  #new_title {
+    font-size:15px;
+  }
+  #error_header{
+    border: solid 2px red;
+    background-color:#ff0000;
+    color:#ffffff;
+  }
+  
+  #error_contents{
+    border:solid 2px red;
+    background-color:#ffe7e0;
+  }
+  
+// style of edit.html.erb
+
+  #edit_title{
+    font-size:15px;
+  }

@@ -5,5 +5,10 @@
   <p>title: <%= @blog.title%></p>
   <p>title: <%= @blog.content%></p>  
   <%= form.submit "register"%>
-  
+<% end %>
+
+<%= form_with(model: @blog, url: new_blog_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :title%>
+  <%= form.hidden_field :content%>
+  <%= form.submit 'back', name: 'back' %>
 <% end %>
